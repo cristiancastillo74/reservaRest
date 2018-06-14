@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<LinearLayout tools:context=".InsertarCicloActivity"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:id="@+id/LinearLayout1" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TableLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/tableRow1">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/TextView03"
+                android:text="ID ciclo"/>
+
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:id="@+id/idciclo"
+                android:ems="10">
+
+                <requestFocus/>
+
+            </EditText>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/tableRow2">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/TextView02"
+                android:text="numero de ciclo"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:id="@+id/numciclo"
+                android:ems="10"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/tableRow3">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/TextView01"
+                android:text="anio"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:id="@+id/anio"
+                android:ems="10"/>
+
+        </TableRow>
+
+
+
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_cicloExterno"
+            android:text="servicio_PHPinterno"
+            android:onClick="insertarCiclo"/>
+
+  </LinearLayout>
+
+</LinearLayout>
