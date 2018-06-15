@@ -31,6 +31,20 @@ public class MainActivity extends Activity {
             case R.id.buttonCicloConsultar:
                 i = new Intent(this,ConsultarCicloActivity.class);
                 break;
+
+
+            case R.id.buttonAsignaturaActualizar:
+                i = new Intent(this,ActualizarCicloActivity.class);
+                break;
+            case R.id.buttonAsignaturaDelete:
+                i = new Intent(this,DeleteCicloActivity.class);
+                break;
+            case R.id.buttonAsignaturaInsertar:
+                i = new Intent(this,InsertarCicloActivity.class);
+                break;
+            case R.id.buttonAsignaturaConsultar:
+                i = new Intent(this,ConsultarCicloActivity.class);
+                break;
         }
 
         if(i!=null)

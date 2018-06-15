@@ -33,6 +33,7 @@ public class ControlBDActivity extends Activity{
         public void onCreate(SQLiteDatabase db) {
             try {
                 db.execSQL("CREATE TABLE ciclo(idciclo INTEGER NOT NULL PRIMARY KEY,numciclo INTEGER,anio INTEGER);");
+                db.execSQL("CREATE TABLE asignatura(codasignatura VARCHAR(10) NOT NULL PRIMARY KEY,idciclo INTEGER NOT NULL, nombreasignatura varchar(50)NOT NULL);");
                 //db.execSQL("CREATE TABLE materia(codmateria VARCHAR(6) NOT NULL PRIMARY KEY,nommateria VARCHAR(30),unidadesval VARCHAR(1));");
                 //db.execSQL("CREATE TABLE nota(carnet VARCHAR(7) NOT NULL ,codmateria VARCHAR(6) NOT NULL ,ciclo VARCHAR(5) ,notafinal REAL ,PRIMARY KEY(carnet,codmateria,ciclo));");
 

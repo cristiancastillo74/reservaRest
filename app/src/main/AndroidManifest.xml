@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hpinteli7.reservarest">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +23,11 @@
         <activity android:name=".DeleteCicloActivity" />
         <activity android:name=".InsertarCicloActivity" />
         <activity android:name=".ConsultarCicloActivity" />
-        <activity android:name=".ControlBDActivity"></activity>
+        <activity android:name=".ControlBDActivity" />
+        <activity android:name=".InsertarAsignaturaActivity" />
+        <activity android:name=".DeleteAsignaturaActivity" />
+        <activity android:name=".ConsultarAsignaturaActivity" />
+        <activity android:name=".ActualizarAsignaturaActivity"></activity>
     </application>
 
 </manifest>
