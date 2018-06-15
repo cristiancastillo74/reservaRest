@@ -34,16 +34,16 @@ public class MainActivity extends Activity {
 
 
             case R.id.buttonAsignaturaActualizar:
-                i = new Intent(this,ActualizarCicloActivity.class);
+                i = new Intent(this,ActualizarAsignaturaActivity.class);
                 break;
             case R.id.buttonAsignaturaDelete:
-                i = new Intent(this,DeleteCicloActivity.class);
+                i = new Intent(this,DeleteAsignaturaActivity.class);
                 break;
             case R.id.buttonAsignaturaInsertar:
-                i = new Intent(this,InsertarCicloActivity.class);
+                i = new Intent(this,InsertarAsignaturaActivity.class);
                 break;
             case R.id.buttonAsignaturaConsultar:
-                i = new Intent(this,ConsultarCicloActivity.class);
+                i = new Intent(this,ConsultarAsignaturaActivity.class);
                 break;
         }
 
