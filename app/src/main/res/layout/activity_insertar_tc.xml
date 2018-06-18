@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<LinearLayout tools:context=".ConsultarAsignaturaActivity"
+<LinearLayout tools:context=".InsertarCicloActivity"
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
@@ -21,16 +21,15 @@
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:textStyle="bold"
                 android:id="@+id/TextView03"
-                android:text="Codigo asignatura:"/>
+                android:text="ID tipo de computo"/>
 
 
             <EditText
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:textColor="#fff"
-                android:id="@+id/codasignatura"
+                android:id="@+id/idciclo"
                 android:ems="10">
 
                 <requestFocus/>
@@ -45,67 +44,59 @@
             android:layout_width="wrap_content"
             android:id="@+id/tableRow2">
 
-            <Button
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:id="@+id/btn_asignaturaExterno"
-                android:text="Buscar"
-                android:textStyle="bold"
-                android:onClick="consultarAsignatura"
-                tools:ignore="OnClick" />
-
-
-        </TableRow>
-
-
-        <TableRow
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/tableRow4">
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:id="@+id/TextView02"
+                android:text="nombre de tipoComputo"/>
 
-                android:textStyle="bold"
-                android:id="@+id/TextView05"
-                android:text="Id ciclo"/>
-
-
-            <TextView
+            <EditText
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-
-                android:textStyle="bold"
                 android:textColor="#fff"
-                android:id="@+id/idciclo"
+                android:id="@+id/numciclo"
                 android:ems="10"/>
 
-
         </TableRow>
+
 
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:id="@+id/tableRow3">
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textStyle="bold"
-                android:id="@+id/TextView06"
-                android:text="Nombrede la Asignatura"/>
-
 
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:textStyle="bold"
+                android:id="@+id/TextView01"
+                android:text="descripcionTecnica"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:textColor="#fff"
-                android:id="@+id/nombreasignatura"
+                android:id="@+id/anio"
                 android:ems="10"/>
-
 
         </TableRow>
 
 
+
+
     </TableLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_cicloExterno"
+            android:text="insertar tipo de Computo"
+            android:onClick="insertarTC"/>
+
+    </LinearLayout>
 </LinearLayout>

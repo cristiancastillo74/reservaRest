@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2979FF"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".MenuActivity">
+
+
+    <Button
+        android:id="@+id/buttonMenuAsinatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:onClick="lanzarActividad"
+        android:text="Gestionar Asignatura" />
+
+    <Button
+        android:id="@+id/buttonMenuCiclo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:onClick="lanzarActividad"
+        android:text="Gestionar ciclo" />
+
+    <Button
+        android:id="@+id/buttonMenuTipoComputo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:onClick="lanzarActividad"
+        android:text="Gestionar Tipo de Computo" />
+
+    <Button
+        android:id="@+id/buttonMenuLab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:onClick="lanzarActividad"
+        android:text="Gestionar Laboratorio" />
+
+
+</LinearLayout>

@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:id="@+id/btn_cicloExterno"
-            android:text="servicio_PHPinterno"
+            android:text="Actualizar Asignatura"
             android:onClick="actualizarAsignatura"
             tools:ignore="OnClick" />
 

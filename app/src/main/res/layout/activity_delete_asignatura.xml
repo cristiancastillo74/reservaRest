@@ -36,7 +36,12 @@
         </TableRow>
 
 
-
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_asignaturaExterno"
+            android:text="eliminar asignatura"
+            android:onClick="eliminarAsignatura"/>
 
 
 
@@ -44,18 +49,8 @@
     </TableLayout>
 
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
 
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/btn_asignaturaExterno"
-            android:text="servicio_PHPinterno"
-            android:onClick="eliminarAsignatura"/>
 
-    </LinearLayout>
+
 
 </LinearLayout>

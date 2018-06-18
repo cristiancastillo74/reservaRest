@@ -32,16 +32,12 @@ import java.util.concurrent.ExecutionException;
 public class ConsultarAsignaturaActivity extends Activity{
 
     EditText codAsignaturaTxt;
-    EditText idCicloTxt;
-    EditText nombreAsignaturaTxt;
+    TextView idCicloTxt;
+    TextView nombreAsignaturaTxt;
     Button btnBuscar;
-    List<Asignatura> asignaturas;
-    TableAdapter tabla;
 
     HttpURLConnection conn;
-    private final String urlHostingGratuito = "http://cm12036pdm115.000webhostapp.com/ws_asignatura_query.php";
-
-    @SuppressLint("NewApi")
+      @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,15 +45,15 @@ public class ConsultarAsignaturaActivity extends Activity{
 
 
         codAsignaturaTxt = (EditText) findViewById(R.id.codasignatura);
-        idCicloTxt = (EditText) findViewById(R.id.idciclo);
-        nombreAsignaturaTxt = (EditText) findViewById(R.id.nombreasignatura);
+        idCicloTxt = (TextView) findViewById(R.id.idciclo);
+        nombreAsignaturaTxt = (TextView) findViewById(R.id.nombreasignatura);
         btnBuscar =(Button)findViewById(R.id.btn_asignaturaExterno);
+
+
+          StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                  .permitAll().build();
+          StrictMode.setThreadPolicy(policy);
     }
-
-
-
-
-
 
 
     public void consultarAsignatura(View v) {
@@ -70,7 +66,7 @@ public class ConsultarAsignaturaActivity extends Activity{
         JSONObject nota = new JSONObject();
 
         try {
-            String jsonText = new WebServiceTask().execute("http://cm12036pdm115.000webhostapp.com/ws_ciclo_query.php?"+"codmateria="+codmateria).get();
+            String jsonText = new WebServiceTask().execute("http://cm12036pdm115.000webhostapp.com/ws_asignatura_query.php?"+"codAsignatura="+codmateria).get();
             //System.out.println(jsonText);
             JSONArray  jsonArray= new JSONArray(jsonText);
 
@@ -83,9 +79,6 @@ public class ConsultarAsignaturaActivity extends Activity{
             }
 
 
-
-            //  for (int i=0;i<jsonArray.length();i++){
-            // idciclo= String.valueOf(object.getInt("IDCICLO"));}
 
         } catch (InterruptedException e) {
             e.printStackTrace();

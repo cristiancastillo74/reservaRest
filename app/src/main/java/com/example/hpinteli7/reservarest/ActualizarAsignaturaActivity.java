@@ -44,8 +44,8 @@ public class ActualizarAsignaturaActivity extends AppCompatActivity {
         String url = null;
         switch (v.getId()) {
             case R.id.btn_cicloExterno:
-                url = urlHostingGratuito + "?codasignatura=" + codAsignatura + "&idciclo="
-                        + idciclo + "&nombreasignatura=" + nombreAsignatura;
+                url = urlHostingGratuito + "?codAsignatura=" + codAsignatura + "&idCiclo="
+                        + idciclo + "&nombreAsignatura=" + nombreAsignatura;
                 ControladorServicio.actualizarAsignaturaExterno(url, this);
                 break;
         }

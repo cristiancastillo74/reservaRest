@@ -44,8 +44,8 @@ public class InsertarAsignaturaActivity extends Activity {
         JSONObject nota = new JSONObject();
         switch (v.getId()) {
             case R.id.btn_asignaturaExterno:
-                url = urlHostingGratuito + "?codasignatura=" + codAsignatura + "&idciclo="
-                        + idciclo + "&nombreasignatura=" + nombreAsignatura;
+                url = urlHostingGratuito + "?codAsignatura=" + codAsignatura + "&idCiclo="
+                        + idciclo + "&nombreAsignatura=" + nombreAsignatura;
                 ControladorServicio.insertarAsignaturaExterno(url, this);
                 break;
         }

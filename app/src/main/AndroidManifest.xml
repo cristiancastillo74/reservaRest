@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +27,20 @@
         <activity android:name=".InsertarAsignaturaActivity" />
         <activity android:name=".DeleteAsignaturaActivity" />
         <activity android:name=".ConsultarAsignaturaActivity" />
-        <activity android:name=".ActualizarAsignaturaActivity"></activity>
+        <activity android:name=".ActualizarAsignaturaActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MenuCicloActivity" />
+        <activity android:name=".MenuAsignaturaActivity" />
+        <activity android:name=".MenuTCActivity" />
+        <activity android:name=".ActualizarTCActivity" />
+        <activity android:name=".ConsultarTCActivity" />
+        <activity android:name=".InsertarTCActivity" />
+        <activity android:name=".DeleteTCActivity" />
+        <activity android:name=".InsertarLaboratorioActivity" />
+        <activity android:name=".ActualizarLaboratorioActivity" />
+        <activity android:name=".MenuLabActivity" />
+        <activity android:name=".DeleteLaboratorioActivity" />
+        <activity android:name=".ConsultarLaboratorioActivity"></activity>
     </application>
 
 </manifest>

@@ -190,7 +190,63 @@ public class ControladorServicio {
     }
 
 
-    /*ASIGNATURA SERVICIOS*/
+    /*TIPOCOMPUTO SERVICIOS*/
+
+    public static void insertarTCExterno(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try {
+            JSONObject resultado = new JSONObject(json);
+
+            Toast.makeText(ctx, "Registro ingresado"+ resultado.getJSONArray("resultado").toString(), Toast.LENGTH_LONG)
+                    .show();
+            int respuesta = resultado.getInt("resultado");
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG)
+                        .show();
+            else
+                Toast.makeText(ctx, "Error registro duplicado",
+                        Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void actualizarTCExterno(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try {
+            JSONObject resultado = new JSONObject(json);
+
+            Toast.makeText(ctx, "Registro ingresado"+ resultado.getJSONArray("resultado").toString(), Toast.LENGTH_LONG).show();
+            int respuesta = resultado.getInt("resultado");
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(ctx, "Error registro duplicado",Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void eliminarTCExterno(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try {
+            JSONObject resultado = new JSONObject(json);
+
+            Toast.makeText(ctx, "Registro ingresado"+ resultado.getJSONArray("resultado").toString(), Toast.LENGTH_LONG).show();
+            int respuesta = resultado.getInt("resultado");
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(ctx, "Error registro duplicado",Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+       /*ASIGNATURA SERVICIOS*/
 
     public static void insertarAsignaturaExterno(String peticion, Context ctx) {
 
@@ -246,7 +302,29 @@ public class ControladorServicio {
         }
     }
 
-    public static void consultarAsignaturaExterno(String peticion, Context ctx) {
+       /*LAB SERVICIOS*/
+
+    public static void insertarLaboratorioExterno(String peticion, Context ctx) {
+
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try {
+            JSONObject resultado = new JSONObject(json);
+
+            Toast.makeText(ctx, "Registro ingresado"+ resultado.getJSONArray("resultado").toString(), Toast.LENGTH_LONG)
+                    .show();
+            int respuesta = resultado.getInt("resultado");
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG)
+                        .show();
+            else
+                Toast.makeText(ctx, "Error registro duplicado",
+                        Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void actualizarLaboratorioExterno(String peticion, Context ctx) {
 
         String json = obtenerRespuestaPeticion(peticion, ctx);
         try {
@@ -263,6 +341,21 @@ public class ControladorServicio {
         }
     }
 
+    public static void eliminarLaboratorioExterno(String peticion, Context ctx) {
 
+        String json = obtenerRespuestaPeticion(peticion, ctx);
+        try {
+            JSONObject resultado = new JSONObject(json);
+
+            Toast.makeText(ctx, "Registro ingresado"+ resultado.getJSONArray("resultado").toString(), Toast.LENGTH_LONG).show();
+            int respuesta = resultado.getInt("resultado");
+            if (respuesta == 1)
+                Toast.makeText(ctx, "Registro ingresado", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(ctx, "Error registro duplicado",Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

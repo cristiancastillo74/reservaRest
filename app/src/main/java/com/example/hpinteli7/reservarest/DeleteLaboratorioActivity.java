@@ -9,36 +9,34 @@ import android.view.View;
 import android.widget.EditText;
 
 @SuppressLint("NewApi")
-
-public class DeleteAsignaturaActivity extends Activity {
-
-    EditText codAsignaturaTxt;
+public class DeleteLaboratorioActivity extends Activity{
+    EditText codlabTxt;
 
 
-    private final String urlHostingGratuito = "http://cm12036pdm115.000webhostapp.com/ws_asignatura_delete.php";
+    private final String urlHostingGratuito = "http://cm12036pdm115.000webhostapp.com/ws_laboratorio_delete.php";
 
     @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delete_asignatura);
+        setContentView(R.layout.activity_delete_laboratorio);
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        codAsignaturaTxt = (EditText) findViewById(R.id.codasignatura);
+        codlabTxt = (EditText) findViewById(R.id.codlab);
     }
 
-    public void eliminarAsignatura(View v) {
+    public void EliminarLab(View v) {
 
-        String codasignatura = codAsignaturaTxt.getText().toString();
+        String cod = codlabTxt.getText().toString();
 
         String url = null;
         switch (v.getId()) {
-            case R.id.btn_asignaturaExterno:
-                url = urlHostingGratuito + "?codAsignatura=" + codasignatura;
-                ControladorServicio.eliminarAsignaturaExterno(url, this);
+            case R.id.btn_cicloExterno:
+                url = urlHostingGratuito + "?codlaboratorio=" + cod;
+                ControladorServicio.eliminarLaboratorioExterno(url, this);
                 break;
         }
 
